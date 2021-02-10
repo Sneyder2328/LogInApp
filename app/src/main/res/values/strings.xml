@@ -1,3 +1,5 @@
 <resources>
-  <string name="app_name">LogInApp</string>
+    <string name="app_name">LogInApp</string>
+    <string name="login_email_hint">Correo eletrónico</string>
+    <string name="login_password_hint">Contraseña</string>
 </resources>
