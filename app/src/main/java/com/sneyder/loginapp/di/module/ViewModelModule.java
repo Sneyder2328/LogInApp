@@ -20,7 +20,6 @@ import androidx.lifecycle.ViewModel;
 import androidx.lifecycle.ViewModelProvider;
 import com.sneyder.loginapp.di.ViewModelKey;
 import com.sneyder.loginapp.ui.login.LogInViewModel;
-import com.sneyder.loginapp.ui.main.MainViewModel;
 import com.sneyder.loginapp.utils.ViewModelProviderFactory;
 import dagger.Binds;
 import dagger.Module;
@@ -29,11 +28,6 @@ import dagger.multibindings.IntoMap;
 @SuppressWarnings(value = "unused")
 @Module
 public abstract class ViewModelModule {
-
-  @Binds
-  @IntoMap
-  @ViewModelKey(MainViewModel.class)
-  abstract ViewModel bindMainViewModel(MainViewModel mainViewModel);
 
   @Binds
   @IntoMap

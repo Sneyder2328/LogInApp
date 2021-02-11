@@ -1,8 +1,15 @@
-package com.sneyder.loginapp.di.data.repository
+package com.sneyder.loginapp.data.repository
 
+import androidx.lifecycle.MutableLiveData
+import com.google.firebase.auth.AuthCredential
+import com.sneyder.loginapp.data.model.User
+import com.sneyder.loginapp.data.model.Result
 
 abstract class UserRepository {
 
+    abstract fun firebaseSignInWithGoogle(authCredential: AuthCredential): MutableLiveData<Result<User>>
+
+    abstract fun firebaseSignInWithEmail(email: String, password: String): MutableLiveData<Result<User>>
 //    abstract fun getCurrentUserProfile(): UserProfile?
 //
 //    abstract suspend fun addModerator(email: String): Result<Boolean>

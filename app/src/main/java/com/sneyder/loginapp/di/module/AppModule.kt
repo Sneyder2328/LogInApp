@@ -18,10 +18,7 @@ package com.sneyder.loginapp.di.module
 
 import android.app.Application
 import android.content.Context
-import android.content.Context.MODE_PRIVATE
-import android.content.SharedPreferences
-import com.sneyder.loginapp.di.data.preferences.AppPreferencesHelper
-import com.sneyder.loginapp.di.data.preferences.PreferencesHelper
+import com.google.firebase.auth.FirebaseAuth
 import dagger.Binds
 import dagger.Module
 import dagger.Provides
@@ -35,19 +32,13 @@ abstract class AppModule {
     @Reusable
     abstract fun provideContext(application: Application): Context
 
-    @Binds
-    @Reusable
-    abstract fun providePreferencesHelper(appPreferencesHelper: AppPreferencesHelper): PreferencesHelper
-
     @Module
     companion object {
-
 
         @Provides
         @Reusable
         @JvmStatic
-        fun provideSharedPreferences(context: Context): SharedPreferences = context.getSharedPreferences("LogInAppV1.0.0", MODE_PRIVATE)
-
+        fun provideFirebaseAuth(): FirebaseAuth = FirebaseAuth.getInstance()
 
     }
 }

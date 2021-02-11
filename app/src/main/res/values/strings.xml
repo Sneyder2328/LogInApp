@@ -2,4 +2,7 @@
     <string name="app_name">LogInApp</string>
     <string name="login_email_hint">Correo eletrónico</string>
     <string name="login_password_hint">Contraseña</string>
+    <string name="label_login">Iniciar sesión</string>
+    <string name="server_client_id">434477538698-qn16b816e3i4d7gmeqchc0ofh0unee3n.apps.googleusercontent.com</string>
+    <string name="login_button">Iniciar sesión</string>
 </resources>

@@ -16,8 +16,8 @@
 
 package com.sneyder.loginapp.di.module
 
-import com.sneyder.loginapp.di.data.repository.AppUserRepository
-import com.sneyder.loginapp.di.data.repository.UserRepository
+import com.sneyder.loginapp.data.repository.AppUserRepository
+import com.sneyder.loginapp.data.repository.UserRepository
 import dagger.Binds
 import dagger.Module
 import javax.inject.Singleton
